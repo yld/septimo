@@ -1,0 +1,50 @@
+exclude_paths:
+  - lib/generators
+  - tmp
+"app/controllers":
+  IrresponsibleModule:
+    enabled: false
+  NestedIterators:
+    max_allowed_nesting: 2
+  UnusedPrivateMethod:
+    enabled: false
+  InstanceVariableAssumption:
+    enabled: false
+"app/helpers":
+  IrresponsibleModule:
+    enabled: false
+  UtilityFunction:
+    enabled: false
+"app/mailers":
+  IrresponsibleModule:
+    enabled: false
+  InstanceVariableAssumption:
+    enabled: false
+"app/jobs":
+  IrresponsibleModule:
+    enabled: false
+"app/channels":
+  IrresponsibleModule:
+    enabled: false
+"app/models":
+  IrresponsibleModule:
+    enabled: false
+"test":
+  IrresponsibleModule:
+    enabled: false
+"app/channels":
+  IrresponsibleModule:
+    enabled: false
+"db/migrate":
+  TooManyStatements:
+    enabled: false
+  FeatureEnvy:
+    enabled: false
+  UncommunicativeVariableName:
+    enabled: false
+IrresponsibleModule:
+  exclude:
+    - '<%= Rails.application.class.parent_name %>::Application'
+    - 'CustomPlan'
+    - 'ApplicationResponder'
+

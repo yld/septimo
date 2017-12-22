@@ -1,0 +1,33 @@
+require:
+  rubocop-thread_safety
+AllCops:
+  TargetRubyVersion: <%= RUBY_VERSION.match(/\d+\.\d+/).to_s %>
+  Exclude:
+    - custom_plan.rb
+    - bin/*
+    - templates/*
+    - db/migrate/*
+    - features/step_definitions/email_steps.rb
+    - Guardfile
+    - features/support/transforms.rb
+    - vendor/*
+Documentation:
+  Enabled: false
+LeadingCommentSpace:
+  Enabled: false
+LineLength:
+  Enabled: false
+Lint/HandleExceptions:
+  Enabled: true
+  Exclude:
+    - custom_plan.rb
+Metrics/BlockLength:
+  Enabled: true
+  Exclude:
+    - Gemfile
+Metrics/LineLength:
+  Enabled: false
+Style/ParallelAssignment:
+  Enabled: false
+
+
