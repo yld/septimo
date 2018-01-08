@@ -8,6 +8,7 @@ namespace :septimo do
     FileUtils.cd(dir) do
       system(command)
       system('bundle exec rails db:migrate')
+      sytem('touch .gitignore')
     end
   end
 
