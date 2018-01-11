@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/yld/septimo.svg?branch=master)](https://travis-ci.org/yld/septimo)
+
 # README
 
 Septimo is a set of standalone opiniated generator dedicated to install and setup various testing and quality Rails and Ruby tools.
