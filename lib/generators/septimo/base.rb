@@ -84,6 +84,18 @@ module Septimo
       run_inside_destination_root("wget #{src} -O #{dst} --quiet")
     end
 
+    def prepend_spring_support(file)
+      return unless options['zeus']
+      prepend_to_file(file) do
+        <<~EOS
+          # This method smells of :reek:UtilityFunction
+          def zeus_running?
+            File.exist?('.zeus.sock') || File.exist?('./spec/dummy/.zeus.sock')
+          end
+        EOS
+      end
+    end
+
     def prepend_zeus_support(file)
       return unless options['zeus']
       prepend_to_file(file) do

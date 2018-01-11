@@ -50,7 +50,7 @@ module Septimo
       install_rspec_files if options[:rspec]
       # TODO: when where
       install_file('spec/support/fix_locales.rb')
-      install_test_files if options[:minitest]
+      install_minitest_files if options[:minitest]
     end
 
     def install_rspec_files

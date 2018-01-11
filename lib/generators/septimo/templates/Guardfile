@@ -1,3 +1,16 @@
+def zeus_running?
+
+end
+
+def spring_running?
+
+end
+
+def command_prefix
+  return 'zeus ' if zeus_running?
+  return 'spring ' if spring_running?
+end
+
 guard 'bundler' do
   watch('Gemfile')
 <% if engine? -%>

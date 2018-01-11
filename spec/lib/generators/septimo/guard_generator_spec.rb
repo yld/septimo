@@ -22,7 +22,8 @@ module Septimo
         end
       end
 
-      %w[rails-best-practices brakeman minitest reek cucumber rspec rubocop].each do |argument|
+      #rails-best-practices
+      %w[brakeman minitest reek cucumber rspec rubocop].each do |argument|
         context "with '--#{argument}'" do
           before { run_generator ["--#{argument}"] }
           it "installs #{argument} guard" do
