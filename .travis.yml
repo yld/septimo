@@ -1,11 +1,12 @@
 language: ruby
 install:
   - bundle install --path vendor/bundle
-  - npm install
 rvm:
  - 2.4.2
  - 2.5.0
+before_install:
+  - gem install rake rails
 before_script:
-  - bundle exec rake septimo:dummy_app
-  - bundle exec rake septimo:dummy_engine
+  - rake septimo:dummy_app
+  - rake septimo:dummy_engine
 script: bundle exec rspec -f doc spec
